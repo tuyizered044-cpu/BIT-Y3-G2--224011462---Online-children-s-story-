@@ -1,0 +1,13 @@
+/* public/assets/css/reader.css */
+#story-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#story-content p {
+    margin-bottom: 1.5rem;
+}

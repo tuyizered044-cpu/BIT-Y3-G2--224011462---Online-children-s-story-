@@ -1,0 +1,599 @@
+/* public/assets/css/style.css */
+:root {
+    --primary-purple: #7C5CFC;
+    --dark-purple: #4B328F;
+    --lavender: #EEE9FF;
+    --soft-pink: #FFD9E8;
+    --cream: #FFF9F0;
+    --light-blue: #DFF4FF;
+    --white: #FFFFFF;
+    --text-dark: #2D2342;
+    --text-light: #6B5B95;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--dark-purple);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-purple);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-purple);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--dark-purple);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+}
+
+/* Hero Section (Matching the Image) */
+.hero {
+    background: var(--lavender);
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark-purple);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    width: 45%;
+    /* Placeholder for the illustration from the image */
+    background: url('../images/hero-image.png') no-repeat center center;
+    background-size: contain;
+    height: 400px; 
+}
+
+/* Story Cards */
+.stories-section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.story-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card-img {
+    height: 200px;
+    background: var(--light-blue);
+    position: relative;
+}
+
+.age-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--white);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+.story-card-content {
+    padding: 1.5rem;
+}
+
+.story-card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.story-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Categories */
+.categories-section {
+    padding: 4rem 5%;
+    background: var(--white);
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-pill {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cat-adventure { background: var(--lavender); color: var(--dark-purple); }
+.cat-animals { background: var(--light-blue); color: var(--dark-purple); }
+.cat-fairy { background: var(--soft-pink); color: var(--dark-purple); }
+.cat-friendship { background: #E0F7FA; color: var(--dark-purple); }
+
+/* Footer */
+footer {
+    background: var(--dark-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+/* =========================================
+   Navbar Layout Fixes
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+.navbar-search {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+/* =========================================
+   Professional Footer Styles
+   ========================================= */
+.site-footer {
+    background: #2D2342; /* Dark purple background */
+    color: #E0D8F0;
+    padding: 4rem 5% 1rem;
+    margin-top: 4rem;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading, 'Nunito', sans-serif);
+}
+
+/* Brand Column */
+.footer-brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-desc {
+    color: #B3A8CC;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+/* Newsletter */
+.newsletter-box h4 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #4B328F;
+    background: #3B2D5C;
+    color: white;
+    outline: none;
+    font-family: inherit;
+}
+
+.newsletter-form input::placeholder {
+    color: #9A8CB8;
+}
+
+.newsletter-form button {
+    background: #7C5CFC;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.newsletter-form button:hover {
+    background: #5E35B1;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #B3A8CC;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #3B2D5C;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background: #7C5CFC;
+    transform: translateY(-3px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #4B328F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #9A8CB8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+/* =========================================
+   Navbar Layout Fixes
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 4%; /* Slightly reduced padding to fit more */
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: nowrap; /* Forces one line */
+    gap: 1rem;
+}
+
+/* Left Side (Brand + Links) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+/* Right Side (Search + Actions) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-search-input {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 180px; /* Controlled width so it doesn't push actions down */
+    font-family: inherit;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-welcome {
+    font-weight: 700;
+    color: var(--dark-purple);
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+/* Compact Professional Buttons */
+.btn-nav-outline {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    font-weight: 700;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.btn-nav-outline:hover {
+    background: var(--lavender);
+}
+
+.btn-nav-primary {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background: var(--primary-purple);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.btn-nav-primary:hover {
+    background: var(--dark-purple);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1100px) {
+    .nav-search-input { width: 120px; }
+    .nav-welcome { display: none; } /* Hide "Hi, User" on small screens to save space */
+}

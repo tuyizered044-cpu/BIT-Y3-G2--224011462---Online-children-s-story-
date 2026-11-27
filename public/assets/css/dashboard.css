@@ -1,0 +1,211 @@
+/* public/assets/css/dashboard.css */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: var(--primary-purple);
+    margin-bottom: 0.5rem;
+}
+/* =========================================
+   Role-Based Sidebar Layout
+   ========================================= */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #F9F9FC;
+}
+
+/* Sidebar */
+.app-sidebar {
+    width: 250px;
+    background: var(--white);
+    border-right: 1px solid var(--lavender);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Stays fixed while content scrolls */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-nav a, 
+.sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.sidebar-nav a:hover,
+.sidebar-logout:hover {
+    background: var(--lavender);
+    color: var(--primary-purple);
+}
+
+/* Main Content Area */
+.app-content {
+    flex: 1;
+    margin-left: 250px; /* Pushes content to the right of the sidebar */
+    padding: 2rem 3rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .app-sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--lavender);
+    }
+    .app-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    .app-layout {
+        flex-direction: column;
+    }
+}
+/* =========================================
+   Role-Based Dashboard Layout
+   ========================================= */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #F9F9FC;
+}
+
+/* Fixed Sidebar */
+.app-sidebar {
+    width: 260px;
+    background: var(--white);
+    border-right: 1px solid var(--lavender);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav a, 
+.sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.sidebar-nav a:hover,
+.sidebar-logout:hover {
+    background: var(--lavender);
+    color: var(--primary-purple);
+}
+
+/* Main Content Area */
+.app-content {
+    flex: 1;
+    margin-left: 260px; /* Pushes content exactly the width of the sidebar */
+    padding: 2.5rem 3rem;
+    min-height: 100vh;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--lavender);
+    }
+    .app-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    .app-layout {
+        flex-direction: column;
+    }
+}

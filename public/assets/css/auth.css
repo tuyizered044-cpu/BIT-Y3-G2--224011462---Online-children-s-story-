@@ -1,0 +1,130 @@
+/* =========================================
+   Authentication Pages (Login & Register)
+   ========================================= */
+
+/* The main card container */
+.auth-container {
+    max-width: 450px;
+    margin: 5rem auto;
+    padding: 2.5rem;
+    background: var(--white, #FFFFFF);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(124, 92, 252, 0.15);
+    border: 1px solid var(--lavender, #EEE9FF);
+}
+
+/* Heading inside the card */
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--dark-purple, #4B328F);
+    font-family: var(--font-heading, 'Nunito', sans-serif);
+}
+
+/* Form Group (Label + Input wrapper) */
+.auth-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark, #2D2342);
+    font-size: 0.95rem;
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+}
+
+/* Input and Select styling */
+.auth-form-group input,
+.auth-form-group select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1.5px solid #E0D8F0;
+    border-radius: 12px;
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #FAFAFF;
+    color: var(--text-dark, #2D2342);
+}
+
+/* Focus state for inputs */
+.auth-form-group input:focus,
+.auth-form-group select:focus {
+    outline: none;
+    border-color: var(--primary-purple, #7C5CFC);
+    box-shadow: 0 0 0 4px rgba(124, 92, 252, 0.1);
+    background: var(--white, #FFFFFF);
+}
+
+/* Submit Button */
+.auth-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    background: var(--primary-purple, #7C5CFC);
+    color: var(--white, #FFFFFF);
+    transition: background 0.3s ease;
+    font-family: var(--font-heading, 'Nunito', sans-serif);
+}
+
+.auth-btn:hover {
+    background: var(--dark-purple, #4B328F);
+}
+
+/* Footer text (e.g., "Already have an account?") */
+.auth-footer-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-light, #6B5B95);
+    font-size: 0.95rem;
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+}
+
+.auth-footer-text a {
+    color: var(--primary-purple, #7C5CFC);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Success/Error Alerts */
+.auth-alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+}
+
+.auth-alert.error {
+    background: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #FFCDD2;
+}
+
+.auth-alert.success {
+    background: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #C8E6C9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+    .auth-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+}

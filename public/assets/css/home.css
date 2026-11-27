@@ -1,0 +1,625 @@
+/* =========================================
+   Professional Homepage Styles
+   ========================================= */
+
+/* Hero Section */
+.hero-professional {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 5% 4rem;
+    background: linear-gradient(135deg, #F3E8FF 0%, #E0F2FE 100%);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    min-height: 500px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 50%;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: #4B328F;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-hero-primary {
+    background: #5E35B1;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-hero-primary:hover {
+    background: #4527A0;
+    transform: translateY(-2px);
+}
+
+.btn-hero-secondary {
+    background: white;
+    color: #5E35B1;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #D1C4E9;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.btn-hero-secondary:hover {
+    border-color: #5E35B1;
+    transform: translateY(-2px);
+}
+
+.hero-image-wrapper {
+    width: 45%;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Placeholder for the illustration */
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #E1BEE7;
+    border-radius: 30px;
+    opacity: 0.5;
+    border: 4px dashed #CE93D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #7B1FA2;
+}
+
+/* Section Dividers */
+.section-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4B328F;
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #D1C4E9;
+    margin: 0 1rem;
+}
+
+/* Featured Stories Grid */
+.featured-section {
+    padding: 0 5%;
+}
+
+.story-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.story-card-modern {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(124, 92, 252, 0.08);
+    transition: transform 0.3s;
+}
+
+.story-card-modern:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 140px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.age-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: #4B328F;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-tag {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.btn-read {
+    background: #5E35B1;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Categories Grid */
+.categories-section-modern {
+    padding: 0 5%;
+}
+
+.category-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.cat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cat-name {
+    color: #333;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 2rem 5%;
+    background: white;
+    margin: 3rem 0;
+    border-radius: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 1.5rem;
+    background: #FAFAFF;
+    border-radius: 16px;
+    border: 1px solid #EEE9FF;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.feature-box h3 {
+    font-size: 1.1rem;
+    color: #4B328F;
+    margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Age Selection & CTA */
+.age-cta-section {
+    display: flex;
+    gap: 2rem;
+    padding: 0 5% 4rem;
+    flex-wrap: wrap;
+}
+
+.age-selection {
+    flex: 1;
+    min-width: 300px;
+}
+
+.age-pills {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.age-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 100px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.age-pill small {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.age-pill:hover { transform: translateY(-5px); }
+
+.bg-pink { background: #F8BBD0; }
+.bg-blue { background: #B3E5FC; }
+.bg-green { background: #C8E6C9; }
+.bg-orange { background: #FFE0B2; }
+
+.cta-writer {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(135deg, #E1BEE7, #B39DDB);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4B328F;
+}
+
+.cta-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-text p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.btn-start-writing {
+    background: #5E35B1;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.cta-illustration {
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .hero-professional {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    .hero-content h1 { font-size: 2.8rem; }
+    .hero-buttons { justify-content: center; }
+    .hero-image-wrapper { width: 100%; height: 300px; }
+    
+    .age-cta-section {
+        flex-direction: column;
+    }
+}
+/* =========================================
+   NEW FEATURES STYLES
+   ========================================= */
+
+/* 1. Hero Interactive (Story of the Day) */
+.hero-interactive {
+    width: 45%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.floating-book-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-book {
+    width: 180px;
+    height: 240px;
+    background: #5E35B1;
+    border-radius: 8px 20px 20px 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -10px 15px 25px rgba(94, 53, 177, 0.3);
+    border-left: 12px solid #4527A0;
+}
+
+.book-emoji {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+}
+
+.book-glare {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+    border-radius: 0 20px 20px 0;
+}
+
+.story-of-day-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: -30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    z-index: 2;
+    border: 1px solid #E0D8F0;
+}
+
+.sotd-badge {
+    background: #FFD9E8;
+    color: #D8000C;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.story-of-day-card h3 {
+    font-size: 1.2rem;
+    color: #4B328F;
+    margin-bottom: 5px;
+}
+
+.story-of-day-card p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.btn-read-now {
+    background: #5E35B1;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-read-now:hover {
+    background: #4527A0;
+}
+
+/* 2. Gamification Section */
+.gamification-section {
+    padding: 0 5%;
+    margin-bottom: 3rem;
+}
+
+.gamification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gamification-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(124, 92, 252, 0.08);
+    border: 1px solid #EEE9FF;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gamification-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.gamification-card h3 {
+    color: #4B328F;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.gamification-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    height: 40px;
+}
+
+.streak-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.streak-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #E0D8F0;
+}
+
+.streak-dots span.active {
+    background: #FF9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.badge-progress {
+    width: 100%;
+    height: 10px;
+    background: #F0F0F5;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #5E35B1, #B39DDB);
+    border-radius: 10px;
+}
+
+.gamification-card small {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #7C5CFC;
+}
+
+/* 3. Authors Section */
+.authors-section {
+    padding: 0 5%;
+    margin-bottom: 3rem;
+}
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.author-card {
+    background: white;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #EEE9FF;
+    transition: transform 0.2s;
+}
+
+.author-card:hover {
+    transform: translateY(-3px);
+}
+
+.author-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4B328F;
+    margin: 0 auto 1rem;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.author-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.author-card p {
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: 600;
+}
+
+/* Mobile Adjustments for New Sections */
+@media (max-width: 900px) {
+    .hero-interactive {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
